@@ -5,6 +5,8 @@ from services.user_service import UserService
 from schemas.users import UserRead, UserUpdate
 from models import User
 from typing import List
+from models import UserSkillLink
+
 
 router = APIRouter(prefix="/users", tags=["Users"])
 
@@ -63,8 +65,31 @@ def patch_user(user_id: int, data: UserUpdate, current_user_id: int = Depends(ge
 
     if data.name:
         user.name = data.name
+    if data.email:
+        user.email = data.email
     if data.bio is not None:
         user.bio = data.bio
+    
+    if data.skills is not None:
+        session.query(UserSkillLink).filter(UserSkillLink.user_id == user_id).delete()
+        
+        for skill_id in data.skills:
+            from models import Skill
+            skill = session.get(Skill, skill_id)
+            if skill:
+                link = UserSkillLink(user_id=user_id, skill_id=skill_id)
+                session.add(link)
+    
+    if data.teams is not None:
+        from models import UserTeamLink
+        session.query(UserTeamLink).filter(UserTeamLink.user_id == user_id).delete()
+        
+        for team_id in data.teams:
+            from models import Team
+            team = session.get(Team, team_id)
+            if team:
+                link = UserTeamLink(user_id=user_id, team_id=team_id)
+                session.add(link)
 
     session.add(user)
     session.commit()

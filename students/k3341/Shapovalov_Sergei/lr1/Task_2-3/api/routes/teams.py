@@ -3,6 +3,7 @@ from connection import get_session
 from services.deps import get_current_user
 from services.team_service import TeamService
 from schemas.teams import TeamCreate, TeamRead, TeamUpdate
+from models import Team, User, UserTeamLink
 from models import Team
 from typing import List
 
@@ -52,7 +53,7 @@ def update_team(team_id: int, data: TeamUpdate, user_id: int = Depends(get_curre
 
 
 @router.patch("/{team_id}", response_model=TeamRead)
-def patch_team(team_id: int, data: TeamUpdate, user_id: int = Depends(get_current_user), session=Depends(get_session)) -> TeamRead:
+def patch_team(team_id: int, data: TeamUpdate, user_id: int = Depends(get_current_user), session=Depends(get_session)) -> TeamRead:    
     team = session.get(Team, team_id)
     if not team:
         raise HTTPException(status_code=404, detail="Team not found")
@@ -65,6 +66,15 @@ def patch_team(team_id: int, data: TeamUpdate, user_id: int = Depends(get_curren
         team.name = data.name
     if data.description is not None:
         team.description = data.description
+    
+    if data.members is not None:
+        session.query(UserTeamLink).filter(UserTeamLink.team_id == team_id).delete()
+        
+        for member_id in data.members:
+            user = session.get(User, member_id)
+            if user:
+                link = UserTeamLink(team_id=team_id, user_id=member_id)
+                session.add(link)
 
     session.add(team)
     session.commit()

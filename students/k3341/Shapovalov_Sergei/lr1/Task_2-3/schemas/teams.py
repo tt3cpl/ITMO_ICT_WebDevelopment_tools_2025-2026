@@ -44,3 +44,4 @@ class TeamRead(BaseModel):
 class TeamUpdate(BaseModel):
     name: Optional[str] = None
     description: Optional[str] = None
+    members: Optional[List[int]] = None

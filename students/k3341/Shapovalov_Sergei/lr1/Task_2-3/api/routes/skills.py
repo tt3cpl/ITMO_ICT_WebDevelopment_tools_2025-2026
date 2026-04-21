@@ -6,6 +6,8 @@ from models import Skill
 from typing import List
 from pydantic import BaseModel
 from typing import Optional
+from models import Skill, User, UserSkillLink
+
 
 router = APIRouter(prefix="/skills", tags=["Skills"])
 
@@ -13,6 +15,7 @@ router = APIRouter(prefix="/skills", tags=["Skills"])
 class SkillUpdate(BaseModel):
     name: Optional[str] = None
     description: Optional[str] = None
+    users: Optional[List[int]] = None
 
 
 @router.post("/", response_model=SkillRead)
@@ -51,7 +54,7 @@ def update_skill(skill_id: int, data: SkillUpdate, session=Depends(get_session))
 
 
 @router.patch("/{skill_id}", response_model=SkillRead)
-def patch_skill(skill_id: int, data: SkillUpdate, session=Depends(get_session)) -> SkillRead:
+def patch_skill(skill_id: int, data: SkillUpdate, session=Depends(get_session)) -> SkillRead:    
     skill = session.get(Skill, skill_id)
     if not skill:
         raise HTTPException(status_code=404, detail="Skill not found")
@@ -60,6 +63,15 @@ def patch_skill(skill_id: int, data: SkillUpdate, session=Depends(get_session)) 
         skill.name = data.name
     if data.description is not None:
         skill.description = data.description
+    
+    if data.users is not None:
+        session.query(UserSkillLink).filter(UserSkillLink.skill_id == skill_id).delete()
+        
+        for user_id in data.users:
+            user = session.get(User, user_id)
+            if user:
+                link = UserSkillLink(skill_id=skill_id, user_id=user_id)
+                session.add(link)
 
     session.add(skill)
     session.commit()

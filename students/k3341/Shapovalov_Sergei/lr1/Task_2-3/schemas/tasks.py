@@ -1,6 +1,6 @@
-from pydantic import BaseModel
-from typing import Optional
-from datetime import date
+from pydantic import BaseModel, field_validator
+from typing import Optional, Union
+from datetime import date, datetime
 
 
 class ProjectInTask(BaseModel):
@@ -35,5 +35,22 @@ class TaskRead(BaseModel):
 class TaskUpdate(BaseModel):
     status: Optional[str] = None
     title: Optional[str] = None
-    deadline: Optional[date] = None
+    deadline: Optional[Union[date, str]] = None
     description: Optional[str] = None
+    
+    @field_validator('deadline', mode='before')
+    @classmethod
+    def parse_deadline(cls, v):
+        if v is None:
+            return None
+        if isinstance(v, date):
+            return v
+        if isinstance(v, str):
+            formats = ['%Y-%m-%d', '%d/%m/%Y', '%m/%d/%Y', '%Y-%m-%d %H:%M:%S', '%d-%m-%Y']
+            for fmt in formats:
+                try:
+                    return datetime.strptime(v, fmt).date()
+                except ValueError:
+                    continue
+            raise ValueError(f'Unable to parse date: {v}')
+        raise ValueError(f'Invalid date type: {type(v)}')

@@ -53,4 +53,7 @@ class UserRead(BaseModel):
 
 class UserUpdate(BaseModel):
     name: Optional[str] = None
+    email: Optional[str] = None
     bio: Optional[str] = None
+    skills: Optional[List[int]] = None
+    teams: Optional[List[int]] = None
