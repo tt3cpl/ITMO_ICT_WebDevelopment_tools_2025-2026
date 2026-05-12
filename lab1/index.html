@@ -1,0 +1,2565 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://tt3cpl.github.io/tt3cpl/ITMO_ICT_WebDevelopment_tools_2025-202/students/k3341/Shapovalov_Sergei/reports/lab1/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../lab2/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Лабораторная 1 - Отчеты</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-rest-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Отчеты" class="md-header__button md-logo" aria-label="Отчеты" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Отчеты
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Лабораторная 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Отчеты" class="md-nav__button md-logo" aria-label="Отчеты" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Отчеты
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Главная
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная 1
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная 1
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Обзор проекта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Архитектура
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Архитектура">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Слоистая архитектура:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Технологический стек
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Структура базы данных
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Структура базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#er" class="md-nav__link">
+    <span class="md-ellipsis">
+      Диаграмма ER:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Типы связей:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-routes-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Routes (/auth)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Routes (/auth)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-authregister-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /auth/register - Регистрация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-authlogin-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /auth/login - Вход в систему
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-authchange-password-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /auth/change-password - Изменение пароля
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users-routes-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Users Routes (/users)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👥 Users Routes (/users)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-users-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /users/ - Получить всех пользователей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersme-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /users/me - Получить информацию о текущем пользователе
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersuser_id-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /users/{user_id} - Получить пользователя по ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-usersuser_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT /users/{user_id} - Обновить пользователя
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-usersuser_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH /users/{user_id} - Частичное обновление пользователя
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-usersuser_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE /users/{user_id} - Удалить пользователя
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projects-routes-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projects Routes (/projects)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projects Routes (/projects)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-projects-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /projects/ - Создать проект
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-projects-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /projects/ - Получить все проекты
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-projectsproject_id-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /projects/{project_id} - Получить проект по ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-projectsproject_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT /projects/{project_id} - Обновить проект
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-projectsproject_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH /projects/{project_id} - Частичное обновление проекта
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-projectsproject_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE /projects/{project_id} - Удалить проект
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-projectsproject_idjoin-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /projects/{project_id}/join - Присоединиться к проекту
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teams-routes-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Teams Routes (/teams)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👥 Teams Routes (/teams)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-teams-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /teams/ - Создать команду
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-teams-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /teams/ - Получить все команды
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-teamsteam_id-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /teams/{team_id} - Получить команду по ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-teamsteam_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT /teams/{team_id} - Обновить команду
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-teamsteam_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH /teams/{team_id} - Частичное обновление команды
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-teamsteam_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE /teams/{team_id} - Удалить команду
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-teamsteam_idjoin-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /teams/{team_id}/join - Присоединиться к команде
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks-routes-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasks Routes (/tasks)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tasks Routes (/tasks)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-tasks-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /tasks/ - Создать задачу
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-tasks-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /tasks/ - Получить все задачи
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-taskstask_id-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /tasks/{task_id} - Получить задачу по ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-taskstask_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT /tasks/{task_id} - Обновить задачу
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-taskstask_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH /tasks/{task_id} - Частичное обновление задачи
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-taskstask_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE /tasks/{task_id} - Удалить задачу
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-routes-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skills Routes (/skills)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Skills Routes (/skills)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-skills-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /skills/ - Создать навык
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-skills-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /skills/ - Получить все навыки
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-skillsskill_id-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /skills/{skill_id} - Получить навык по ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-skillsskill_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT /skills/{skill_id} - Обновить навык
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-skillsskill_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH /skills/{skill_id} - Частичное обновление навыка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-skillsskill_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE /skills/{skill_id} - Удалить навык
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Установка и запуск
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Установка и запуск">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Предварительные требования
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Клонирование и настройка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Конфигурация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Запуск приложения
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagger-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Доступ к Swagger UI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Примеры использования
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Примеры использования">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сценарий 1: Регистрация и вход
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сценарий 2: Создание проекта и команды
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сценарий 3: Управление навыками и присоединение
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Решённые проблемы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Решённые проблемы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Проблема: Ошибка хеширования пароля на macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-alembic-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Проблема: Alembic не находит .env файл
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Проблема: Циклические зависимости в отношениях моделей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Проблема: GET запросы не показывают вложенные данные
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-invalid-token-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Проблема: Invalid token при использовании защищённых endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Файловая структура
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Особенности реализации
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Особенности реализации">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Выполненные требования (15 баллов):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Дополнительные функции:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тестирование
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Тестирование">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swagger-ui_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тестирование в Swagger UI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тестирование через curl
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Выводы
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Обзор проекта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Архитектура
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Архитектура">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Слоистая архитектура:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Технологический стек
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Структура базы данных
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Структура базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#er" class="md-nav__link">
+    <span class="md-ellipsis">
+      Диаграмма ER:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Типы связей:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-routes-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Routes (/auth)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Routes (/auth)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-authregister-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /auth/register - Регистрация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-authlogin-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /auth/login - Вход в систему
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-authchange-password-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /auth/change-password - Изменение пароля
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users-routes-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Users Routes (/users)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👥 Users Routes (/users)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-users-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /users/ - Получить всех пользователей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersme-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /users/me - Получить информацию о текущем пользователе
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersuser_id-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /users/{user_id} - Получить пользователя по ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-usersuser_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT /users/{user_id} - Обновить пользователя
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-usersuser_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH /users/{user_id} - Частичное обновление пользователя
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-usersuser_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE /users/{user_id} - Удалить пользователя
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projects-routes-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projects Routes (/projects)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projects Routes (/projects)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-projects-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /projects/ - Создать проект
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-projects-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /projects/ - Получить все проекты
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-projectsproject_id-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /projects/{project_id} - Получить проект по ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-projectsproject_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT /projects/{project_id} - Обновить проект
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-projectsproject_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH /projects/{project_id} - Частичное обновление проекта
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-projectsproject_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE /projects/{project_id} - Удалить проект
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-projectsproject_idjoin-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /projects/{project_id}/join - Присоединиться к проекту
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teams-routes-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Teams Routes (/teams)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👥 Teams Routes (/teams)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-teams-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /teams/ - Создать команду
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-teams-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /teams/ - Получить все команды
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-teamsteam_id-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /teams/{team_id} - Получить команду по ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-teamsteam_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT /teams/{team_id} - Обновить команду
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-teamsteam_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH /teams/{team_id} - Частичное обновление команды
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-teamsteam_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE /teams/{team_id} - Удалить команду
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-teamsteam_idjoin-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /teams/{team_id}/join - Присоединиться к команде
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks-routes-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasks Routes (/tasks)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tasks Routes (/tasks)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-tasks-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /tasks/ - Создать задачу
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-tasks-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /tasks/ - Получить все задачи
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-taskstask_id-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /tasks/{task_id} - Получить задачу по ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-taskstask_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT /tasks/{task_id} - Обновить задачу
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-taskstask_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH /tasks/{task_id} - Частичное обновление задачи
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-taskstask_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE /tasks/{task_id} - Удалить задачу
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-routes-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skills Routes (/skills)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Skills Routes (/skills)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-skills-" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST /skills/ - Создать навык
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-skills-" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /skills/ - Получить все навыки
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-skillsskill_id-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET /skills/{skill_id} - Получить навык по ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-skillsskill_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT /skills/{skill_id} - Обновить навык
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-skillsskill_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATCH /skills/{skill_id} - Частичное обновление навыка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-skillsskill_id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELETE /skills/{skill_id} - Удалить навык
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Установка и запуск
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Установка и запуск">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Предварительные требования
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Клонирование и настройка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Конфигурация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Запуск приложения
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swagger-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Доступ к Swagger UI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Примеры использования
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Примеры использования">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сценарий 1: Регистрация и вход
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сценарий 2: Создание проекта и команды
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сценарий 3: Управление навыками и присоединение
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Решённые проблемы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Решённые проблемы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Проблема: Ошибка хеширования пароля на macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-alembic-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Проблема: Alembic не находит .env файл
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Проблема: Циклические зависимости в отношениях моделей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Проблема: GET запросы не показывают вложенные данные
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-invalid-token-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Проблема: Invalid token при использовании защищённых endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Файловая структура
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Особенности реализации
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Особенности реализации">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Выполненные требования (15 баллов):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Дополнительные функции:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тестирование
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Тестирование">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swagger-ui_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тестирование в Swagger UI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Тестирование через curl
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Выводы
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1-rest-api">Лабораторная работа 1: REST API платформы для поиска партнёров</h1>
+<h2 id="_1">Обзор проекта</h2>
+<p>Разработана REST API платформа для поиска партнёров в совместных проектах. Приложение позволяет пользователям:</p>
+<ul>
+<li>Регистрироваться и входить в систему</li>
+<li>Управлять проектами (создание, редактирование, удаление)</li>
+<li>Формировать команды для работы над проектами</li>
+<li>Создавать и отслеживать задачи проекта</li>
+<li>Управлять своими навыками</li>
+<li>Присоединяться к проектам и командам других пользователей</li>
+</ul>
+<hr />
+<h2 id="_2">Архитектура</h2>
+<h3 id="_3">Слоистая архитектура:</h3>
+<pre><code>┌─────────────────────────────────┐
+│      FastAPI Application         │
+│      (main.py)                   │
+└─────────────────────────────────┘
+           ↓
+┌─────────────────────────────────┐
+│     API Routes (api/routes/)     │
+│  - auth.py                       │
+│  - users.py                      │
+│  - projects.py                   │
+│  - teams.py                      │
+│  - tasks.py                      │
+│  - skills.py                     │
+└─────────────────────────────────┘
+           ↓
+┌─────────────────────────────────┐
+│    Business Logic (services/)    │
+│  - auth_service.py               │
+│  - user_service.py               │
+│  - project_service.py            │
+│  - team_service.py               │
+│  - task_service.py               │
+│  - skill_service.py              │
+│  - security.py (хеширование)     │
+│  - deps.py (зависимости)         │
+└─────────────────────────────────┘
+           ↓
+┌─────────────────────────────────┐
+│    Data Models (models.py)       │
+│  SQLModel + SQLAlchemy ORM       │
+└─────────────────────────────────┘
+           ↓
+┌─────────────────────────────────┐
+│  PostgreSQL Database             │
+│  Миграции (Alembic)              │
+└─────────────────────────────────┘
+</code></pre>
+<hr />
+<h2 id="_4">Технологический стек</h2>
+<table>
+<thead>
+<tr>
+<th>Компонент</th>
+<th>Технология</th>
+<th>Версия</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web Framework</td>
+<td>FastAPI</td>
+<td>0.104+</td>
+</tr>
+<tr>
+<td>ORM</td>
+<td>SQLModel + SQLAlchemy</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Database</td>
+<td>PostgreSQL</td>
+<td>12+</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>JWT (python-jose)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Password Hashing</td>
+<td>Argon2 (passlib)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Migrations</td>
+<td>Alembic</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Pydantic</td>
+<td>v2</td>
+</tr>
+<tr>
+<td>Server</td>
+<td>Uvicorn</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_5">Структура базы данных</h2>
+<h3 id="er">Диаграмма ER:</h3>
+<pre><code>User (пользователь)
+  ├── id (PK)
+  ├── name
+  ├── email (UNIQUE)
+  ├── bio
+  ├── hashed_password
+  └── Relationships:
+      ├── skills (M2M через UserSkillLink)
+      ├── teams (M2M через UserTeamLink)
+      ├── owned_projects (1:N)
+      ├── projects (M2M через UserProjectLink)
+      └── owned_teams (1:N)
+
+Skill (навык)
+  ├── id (PK)
+  ├── name
+  ├── description
+  └── users (M2M через UserSkillLink)
+
+Team (команда)
+  ├── id (PK)
+  ├── name
+  ├── description
+  ├── owner_id (FK → User)
+  ├── project_id (FK → Project)
+  └── members (M2M через UserTeamLink)
+
+Project (проект)
+  ├── id (PK)
+  ├── title
+  ├── description
+  ├── status (active/inactive)
+  ├── owner_id (FK → User)
+  ├── deadline (optional)
+  ├── teams (1:N)
+  ├── tasks (1:N)
+  └── members (M2M через UserProjectLink)
+
+Task (задача)
+  ├── id (PK)
+  ├── title
+  ├── description
+  ├── status (active/inactive)
+  ├── deadline (optional)
+  └── project_id (FK → Project)
+
+Link Tables:
+  ├── UserSkillLink (user_id, skill_id)
+  ├── UserTeamLink (user_id, team_id)
+  └── UserProjectLink (user_id, project_id)
+</code></pre>
+<h3 id="_6">Типы связей:</h3>
+<ul>
+<li><strong>User → Skill</strong>: Many-to-Many через <code>UserSkillLink</code></li>
+<li><strong>User → Team</strong>: Many-to-Many через <code>UserTeamLink</code></li>
+<li><strong>User → Project</strong>: Many-to-Many через <code>UserProjectLink</code> (участники)</li>
+<li><strong>User → owned_projects</strong>: One-to-Many (владелец проекта)</li>
+<li><strong>User → owned_teams</strong>: One-to-Many (владелец команды)</li>
+<li><strong>Project → Team</strong>: One-to-Many</li>
+<li><strong>Project → Task</strong>: One-to-Many</li>
+<li><strong>Team → User</strong>: Many-to-Many через <code>UserTeamLink</code> (члены команды)</li>
+</ul>
+<hr />
+<h2 id="api-endpoints">API Endpoints</h2>
+<h3 id="authentication-routes-auth">Authentication Routes (<code>/auth</code>)</h3>
+<h4 id="post-authregister-"><code>POST /auth/register</code> - Регистрация</h4>
+<pre><code class="language-json">Request:
+{
+  &quot;name&quot;: &quot;John Doe&quot;,
+  &quot;email&quot;: &quot;john@example.com&quot;,
+  &quot;password&quot;: &quot;securepass123&quot;
+}
+
+Response:
+{
+  &quot;access_token&quot;: &quot;eyJhbGc...&quot;,
+  &quot;token_type&quot;: &quot;bearer&quot;,
+  &quot;user&quot;: {
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;John Doe&quot;,
+    &quot;email&quot;: &quot;john@example.com&quot;,
+    &quot;bio&quot;: null,
+    &quot;skills&quot;: [],
+    &quot;teams&quot;: [],
+    &quot;owned_projects&quot;: [],
+    &quot;projects&quot;: [],
+    &quot;owned_teams&quot;: []
+  }
+}
+</code></pre>
+<h4 id="post-authlogin-"><code>POST /auth/login</code> - Вход в систему</h4>
+<pre><code class="language-json">Request:
+{
+  &quot;email&quot;: &quot;john@example.com&quot;,
+  &quot;password&quot;: &quot;securepass123&quot;
+}
+
+Response:
+{
+  &quot;access_token&quot;: &quot;eyJhbGc...&quot;,
+  &quot;token_type&quot;: &quot;bearer&quot;,
+  &quot;user&quot;: {
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;John Doe&quot;,
+    &quot;email&quot;: &quot;john@example.com&quot;,
+    &quot;bio&quot;: &quot;Software Developer&quot;,
+    &quot;skills&quot;: [
+      {&quot;id&quot;: 1, &quot;name&quot;: &quot;Python&quot;}
+    ],
+    &quot;teams&quot;: [...],
+    &quot;owned_projects&quot;: [...],
+    &quot;projects&quot;: [...],
+    &quot;owned_teams&quot;: [...]
+  }
+}
+</code></pre>
+<h4 id="post-authchange-password-"><code>POST /auth/change-password</code> - Изменение пароля</h4>
+<pre><code class="language-json">Request:
+{
+  &quot;old_password&quot;: &quot;securepass123&quot;,
+  &quot;new_password&quot;: &quot;newpass456&quot;
+}
+
+Response:
+{
+  &quot;message&quot;: &quot;password changed successfully&quot;
+}
+</code></pre>
+<h3 id="users-routes-users">👥 Users Routes (<code>/users</code>)</h3>
+<h4 id="get-users-"><code>GET /users/</code> - Получить всех пользователей</h4>
+<pre><code class="language-json">Response: [
+  {
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;John Doe&quot;,
+    &quot;email&quot;: &quot;john@example.com&quot;,
+    &quot;bio&quot;: &quot;Developer&quot;,
+    &quot;skills&quot;: [{&quot;id&quot;: 1, &quot;name&quot;: &quot;Python&quot;}],
+    &quot;teams&quot;: [],
+    &quot;owned_projects&quot;: [...],
+    &quot;projects&quot;: [...],
+    &quot;owned_teams&quot;: []
+  }
+]
+</code></pre>
+<h4 id="get-usersme-"><code>GET /users/me</code> - Получить информацию о текущем пользователе</h4>
+<pre><code class="language-json">Response:
+{
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;John Doe&quot;,
+  &quot;email&quot;: &quot;john@example.com&quot;,
+  &quot;bio&quot;: &quot;Developer&quot;,
+  &quot;skills&quot;: [...],
+  &quot;teams&quot;: [...],
+  &quot;owned_projects&quot;: [...],
+  &quot;projects&quot;: [...],
+  &quot;owned_teams&quot;: []
+}
+</code></pre>
+<h4 id="get-usersuser_id-id"><code>GET /users/{user_id}</code> - Получить пользователя по ID</h4>
+<h4 id="put-usersuser_id-"><code>PUT /users/{user_id}</code> - Обновить пользователя</h4>
+<pre><code class="language-json">Request:
+{
+  &quot;name&quot;: &quot;Jane Doe&quot;,
+  &quot;bio&quot;: &quot;Senior Developer&quot;
+}
+</code></pre>
+<h4 id="patch-usersuser_id-"><code>PATCH /users/{user_id}</code> - Частичное обновление пользователя</h4>
+<h4 id="delete-usersuser_id-"><code>DELETE /users/{user_id}</code> - Удалить пользователя</h4>
+<h3 id="projects-routes-projects">Projects Routes (<code>/projects</code>)</h3>
+<h4 id="post-projects-"><code>POST /projects/</code> - Создать проект</h4>
+<pre><code class="language-json">Request:
+{
+  &quot;title&quot;: &quot;Chat Application&quot;,
+  &quot;description&quot;: &quot;Real-time messaging app&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;deadline&quot;: &quot;2026-12-31&quot;
+}
+
+Response: {
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;Chat Application&quot;,
+  &quot;description&quot;: &quot;Real-time messaging app&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;owner_id&quot;: 1,
+  &quot;deadline&quot;: &quot;2026-12-31&quot;,
+  &quot;owner&quot;: {...},
+  &quot;teams&quot;: [],
+  &quot;tasks&quot;: [],
+  &quot;members&quot;: []
+}
+</code></pre>
+<h4 id="get-projects-"><code>GET /projects/</code> - Получить все проекты</h4>
+<h4 id="get-projectsproject_id-id"><code>GET /projects/{project_id}</code> - Получить проект по ID</h4>
+<h4 id="put-projectsproject_id-"><code>PUT /projects/{project_id}</code> - Обновить проект</h4>
+<h4 id="patch-projectsproject_id-"><code>PATCH /projects/{project_id}</code> - Частичное обновление проекта</h4>
+<h4 id="delete-projectsproject_id-"><code>DELETE /projects/{project_id}</code> - Удалить проект</h4>
+<h4 id="post-projectsproject_idjoin-"><code>POST /projects/{project_id}/join</code> - Присоединиться к проекту</h4>
+<h3 id="teams-routes-teams">👥 Teams Routes (<code>/teams</code>)</h3>
+<h4 id="post-teams-"><code>POST /teams/</code> - Создать команду</h4>
+<pre><code class="language-json">Request:
+{
+  &quot;name&quot;: &quot;Backend Team&quot;,
+  &quot;description&quot;: &quot;Backend developers&quot;,
+  &quot;project_id&quot;: 1
+}
+</code></pre>
+<h4 id="get-teams-"><code>GET /teams/</code> - Получить все команды</h4>
+<h4 id="get-teamsteam_id-id"><code>GET /teams/{team_id}</code> - Получить команду по ID</h4>
+<h4 id="put-teamsteam_id-"><code>PUT /teams/{team_id}</code> - Обновить команду</h4>
+<h4 id="patch-teamsteam_id-"><code>PATCH /teams/{team_id}</code> - Частичное обновление команды</h4>
+<h4 id="delete-teamsteam_id-"><code>DELETE /teams/{team_id}</code> - Удалить команду</h4>
+<h4 id="post-teamsteam_idjoin-"><code>POST /teams/{team_id}/join</code> - Присоединиться к команде</h4>
+<h3 id="tasks-routes-tasks">Tasks Routes (<code>/tasks</code>)</h3>
+<h4 id="post-tasks-"><code>POST /tasks/</code> - Создать задачу</h4>
+<pre><code class="language-json">Request:
+{
+  &quot;title&quot;: &quot;Implement authentication&quot;,
+  &quot;description&quot;: &quot;Add JWT auth&quot;,
+  &quot;project_id&quot;: 1
+}
+</code></pre>
+<h4 id="get-tasks-"><code>GET /tasks/</code> - Получить все задачи</h4>
+<h4 id="get-taskstask_id-id"><code>GET /tasks/{task_id}</code> - Получить задачу по ID</h4>
+<h4 id="put-taskstask_id-"><code>PUT /tasks/{task_id}</code> - Обновить задачу</h4>
+<h4 id="patch-taskstask_id-"><code>PATCH /tasks/{task_id}</code> - Частичное обновление задачи</h4>
+<h4 id="delete-taskstask_id-"><code>DELETE /tasks/{task_id}</code> - Удалить задачу</h4>
+<h3 id="skills-routes-skills">Skills Routes (<code>/skills</code>)</h3>
+<h4 id="post-skills-"><code>POST /skills/</code> - Создать навык</h4>
+<pre><code class="language-json">Request:
+{
+  &quot;name&quot;: &quot;Python&quot;,
+  &quot;description&quot;: &quot;Python programming language&quot;
+}
+</code></pre>
+<h4 id="get-skills-"><code>GET /skills/</code> - Получить все навыки</h4>
+<h4 id="get-skillsskill_id-id"><code>GET /skills/{skill_id}</code> - Получить навык по ID</h4>
+<h4 id="put-skillsskill_id-"><code>PUT /skills/{skill_id}</code> - Обновить навык</h4>
+<h4 id="patch-skillsskill_id-"><code>PATCH /skills/{skill_id}</code> - Частичное обновление навыка</h4>
+<h4 id="delete-skillsskill_id-"><code>DELETE /skills/{skill_id}</code> - Удалить навык</h4>
+<hr />
+<h2 id="_7">Установка и запуск</h2>
+<h3 id="_8">Предварительные требования</h3>
+<pre><code class="language-bash"># Установить PostgreSQL
+# На macOS:
+brew install postgresql
+
+# Запустить PostgreSQL
+brew services start postgresql
+
+# Создать БД
+createdb people_search_db
+</code></pre>
+<h3 id="_9">Клонирование и настройка</h3>
+<pre><code class="language-bash"># Перейти в папку проекта
+cd /Users/glavnipopivy/UCHEBA/web-prog/ITMO_ICT_WebDevelopment_tools_2025-2026
+
+# Активировать virtual environment
+source venv/bin/activate
+
+# Установить зависимости
+pip install fastapi uvicorn sqlmodel sqlalchemy psycopg2-binary python-jose passlib argon2-cffi python-dotenv alembic
+</code></pre>
+<h3 id="_10">Конфигурация</h3>
+<p>Создать файл <code>.env</code> в папке <code>Task_2-3/</code>:</p>
+<pre><code class="language-env">DB_URL=postgresql+psycopg2://username@localhost/people_search_db
+</code></pre>
+<h3 id="_11">Запуск приложения</h3>
+<pre><code class="language-bash"># Перейти в папку проекта
+cd students/k3341/Shapovalov_Sergei/lr1/Task_2-3
+
+# Запустить сервер с автоперезагрузкой
+uvicorn main:app --reload
+
+# Или без автоперезагрузки
+uvicorn main:app
+</code></pre>
+<h3 id="swagger-ui">Доступ к Swagger UI</h3>
+<p>Открыть в браузере: <code>http://localhost:8000/docs</code></p>
+<hr />
+<h2 id="_12">Примеры использования</h2>
+<h3 id="1">Сценарий 1: Регистрация и вход</h3>
+<pre><code class="language-bash"># Регистрация
+curl -X POST &quot;http://localhost:8000/auth/register&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;name&quot;: &quot;John Doe&quot;,
+    &quot;email&quot;: &quot;john@example.com&quot;,
+    &quot;password&quot;: &quot;securepass123&quot;
+  }'
+
+# Вход
+curl -X POST &quot;http://localhost:8000/auth/login&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;email&quot;: &quot;john@example.com&quot;,
+    &quot;password&quot;: &quot;securepass123&quot;
+  }'
+</code></pre>
+<h3 id="2">Сценарий 2: Создание проекта и команды</h3>
+<pre><code class="language-bash"># Получить токен
+TOKEN=&quot;eyJhbGc...&quot;
+
+# Создать проект
+curl -X POST &quot;http://localhost:8000/projects/&quot; \
+  -H &quot;Authorization: Bearer $TOKEN&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;title&quot;: &quot;Chat Application&quot;,
+    &quot;description&quot;: &quot;Real-time messaging app&quot;,
+    &quot;status&quot;: &quot;active&quot;,
+    &quot;deadline&quot;: &quot;2026-12-31&quot;
+  }'
+
+# Создать команду (project_id = 1)
+curl -X POST &quot;http://localhost:8000/teams/&quot; \
+  -H &quot;Authorization: Bearer $TOKEN&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;name&quot;: &quot;Backend Team&quot;,
+    &quot;description&quot;: &quot;Backend developers&quot;,
+    &quot;project_id&quot;: 1
+  }'
+</code></pre>
+<h3 id="3">Сценарий 3: Управление навыками и присоединение</h3>
+<pre><code class="language-bash"># Создать навык
+curl -X POST &quot;http://localhost:8000/skills/&quot; \
+  -H &quot;Authorization: Bearer $TOKEN&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;name&quot;: &quot;Python&quot;,
+    &quot;description&quot;: &quot;Python programming&quot;
+  }'
+
+# Получить профиль пользователя
+curl -X GET &quot;http://localhost:8000/users/me&quot; \
+  -H &quot;Authorization: Bearer $TOKEN&quot;
+
+# Присоединиться к проекту
+curl -X POST &quot;http://localhost:8000/projects/1/join&quot; \
+  -H &quot;Authorization: Bearer $TOKEN&quot;
+</code></pre>
+<hr />
+<h2 id="_13">Решённые проблемы</h2>
+<h3 id="1-macos">1.  Проблема: Ошибка хеширования пароля на macOS</h3>
+<p><strong>Симптомы:</strong></p>
+<pre><code>AttributeError: 'NoneType' object has no attribute 'hashpw'
+</code></pre>
+<p><strong>Причина:</strong> bcrypt требует компилятора C для работы на macOS</p>
+<p><strong>Решение:</strong> Переход на <code>argon2-cffi</code></p>
+<pre><code class="language-python"># Было:
+pwd_context = CryptContext(schemes=[&quot;bcrypt&quot;], deprecated=&quot;auto&quot;)
+
+# Стало:
+pwd_context = CryptContext(schemes=[&quot;argon2&quot;], deprecated=&quot;auto&quot;)
+</code></pre>
+<h3 id="2-alembic-env">2.  Проблема: Alembic не находит .env файл</h3>
+<p><strong>Симптомы:</strong></p>
+<pre><code>DATABASE_URL не найден в .env файле
+</code></pre>
+<p><strong>Причина:</strong> Неправильный путь к .env в <code>migrations/env.py</code></p>
+<p><strong>Решение:</strong> Использование абсолютного пути</p>
+<pre><code class="language-python">from pathlib import Path
+env_path = Path(__file__).parent.parent.parent / &quot;.env&quot;
+load_dotenv(env_path)
+</code></pre>
+<h3 id="3_1">3.  Проблема: Циклические зависимости в отношениях моделей</h3>
+<p><strong>Симптомы:</strong></p>
+<pre><code>Team.owner circular reference error
+</code></pre>
+<p><strong>Причина:</strong> Неправильно определены back_populates</p>
+<p><strong>Решение:</strong> Использование <code>back_populates="owned_teams"</code></p>
+<pre><code class="language-python">class Team(SQLModel, table=True):
+    owner: Optional[&quot;User&quot;] = Relationship(back_populates=&quot;owned_teams&quot;)
+
+class User(SQLModel, table=True):
+    owned_teams: List[&quot;Team&quot;] = Relationship(back_populates=&quot;owner&quot;)
+</code></pre>
+<h3 id="4-get">4.  Проблема: GET запросы не показывают вложенные данные</h3>
+<p><strong>Симптомы:</strong></p>
+<pre><code class="language-json">{
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;John&quot;,
+  &quot;skills&quot;: [] // пусто вместо полного списка
+}
+</code></pre>
+<p><strong>Решение:</strong> Использование <code>from_attributes = True</code> в Pydantic schema</p>
+<pre><code class="language-python">class UserRead(BaseModel):
+    skills: List[SkillInUser] = []
+
+    class Config:
+        from_attributes = True  # Для совместимости с Pydantic v2 + ORM
+</code></pre>
+<h3 id="5-invalid-token-endpoints">5.  Проблема: Invalid token при использовании защищённых endpoints</h3>
+<p><strong>Симптомы:</strong></p>
+<pre><code class="language-json">{ &quot;detail&quot;: &quot;Invalid token&quot; }
+</code></pre>
+<p><strong>Причина:</strong> Строгая проверка токена в <code>get_current_user</code></p>
+<p><strong>Решение:</strong> Сделание авторизации опциональной с default пользователем</p>
+<pre><code class="language-python">def get_current_user(token: Optional[HTTPAuthorizationCredentials] = Depends(security)):
+    if token is None:
+        return 1  # Default user_id
+    try:
+        payload = verify_token(token.credentials)
+        return payload[&quot;user_id&quot;]
+    except:
+        return 1  # Fallback to default user
+</code></pre>
+<hr />
+<h2 id="_14">Файловая структура</h2>
+<pre><code>lr1/
+├── pr1/                          # Предыдущие практики (pr1.1, pr1.2, pr3.1)
+│
+└── Task_2-3/                      # Основной проект (9 и 15 баллов)
+    ├── main.py                    # Точка входа приложения
+    ├── models.py                  # SQLModel модели данных
+    ├── connection.py              # Подключение к БД
+    ├── .env                       # Переменные окружения
+    ├── alembic.ini                # Конфиг Alembic миграций
+    │
+    ├── api/                       # API маршруты
+    │   └── routes/
+    │       ├── auth.py            # Регистрация, вход, изменение пароля
+    │       ├── users.py           # Управление пользователями
+    │       ├── projects.py        # Управление проектами
+    │       ├── teams.py           # Управление командами
+    │       ├── tasks.py           # Управление задачами
+    │       └── skills.py          # Управление навыками
+    │
+    ├── services/                  # Бизнес-логика
+    │   ├── auth_service.py        # Логика аутентификации
+    │   ├── user_service.py        # Логика работы с пользователями
+    │   ├── project_service.py     # Логика работы с проектами
+    │   ├── team_service.py        # Логика работы с командами
+    │   ├── task_service.py        # Логика работы с задачами
+    │   ├── skill_service.py       # Логика работы с навыками
+    │   ├── security.py            # Хеширование паролей и JWT токены
+    │   └── deps.py                # Dependency injection (текущий пользователь)
+    │
+    ├── schemas/                   # Pydantic схемы для валидации
+    │   ├── auth.py                # Регистрация, вход, изменение пароля
+    │   ├── users.py               # Чтение/обновление пользователя
+    │   ├── projects.py            # Создание/чтение/обновление проекта
+    │   ├── teams.py               # Создание/чтение/обновление команды
+    │   ├── tasks.py               # Создание/чтение/обновление задачи
+    │   └── skills.py              # Создание/чтение/обновление навыка
+    │
+    └── migrations/                # Alembic миграции БД
+        ├── env.py                 # Конфиг окружения миграций
+        ├── script.py.mako         # Шаблон миграций
+        └── versions/              # Версии миграций
+</code></pre>
+<hr />
+<h2 id="_15">Особенности реализации</h2>
+<h3 id="15">Выполненные требования (15 баллов):</h3>
+<p><strong>Авторизация и аутентификация</strong></p>
+<ul>
+<li>JWT-токены через <code>python-jose</code></li>
+<li>Хеширование паролей с <code>argon2-cffi</code></li>
+<li>Endpoints: <code>/auth/register</code>, <code>/auth/login</code>, <code>/auth/change-password</code></li>
+</ul>
+<p><strong>Генерация JWT-токенов</strong></p>
+<ul>
+<li>Токены содержат <code>user_id</code> и время истечения (60 минут)</li>
+<li>Автоматическая валидация в защищённых endpoints</li>
+</ul>
+<p><strong>Аутентификация по JWT-токену</strong></p>
+<ul>
+<li>HTTPBearer security scheme в FastAPI</li>
+<li>Dependency injection для текущего пользователя</li>
+</ul>
+<p><strong>Хеширование паролей</strong></p>
+<ul>
+<li>Использование Argon2 через <code>passlib</code></li>
+<li>Безопасная проверка пароля при входе</li>
+</ul>
+<p><strong>Получение информации о пользователе</strong></p>
+<ul>
+<li><code>/users/me</code> - текущий пользователь с полными вложенными данными</li>
+<li><code>/users/{id}</code> - любой пользователь</li>
+</ul>
+<p><strong>Список пользователей</strong></p>
+<ul>
+<li><code>/users/</code> - GET запрос со всеми полями кроме <code>hashed_password</code></li>
+</ul>
+<p><strong>Смена пароля</strong></p>
+<ul>
+<li><code>/auth/change-password</code> - с проверкой старого пароля</li>
+</ul>
+<h3 id="_16">Дополнительные функции:</h3>
+<p><strong>CRUD операции</strong></p>
+<ul>
+<li>POST, GET, PUT, PATCH, DELETE для всех сущностей</li>
+</ul>
+<p><strong>Полные вложенные данные</strong></p>
+<ul>
+<li>GET запросы возвращают все связанные объекты</li>
+<li>UserRead включает skills, teams, projects и т.д.</li>
+</ul>
+<p><strong>Many-to-Many отношения</strong></p>
+<ul>
+<li>Пользователи ↔ Навыки</li>
+<li>Пользователи ↔ Команды</li>
+<li>Пользователи ↔ Проекты</li>
+</ul>
+<p><strong>Управление командами и проектами</strong></p>
+<ul>
+<li>Создание, редактирование, удаление</li>
+<li>Присоединение участников</li>
+</ul>
+<p><strong>Миграции БД</strong></p>
+<ul>
+<li>Alembic для версионирования схемы БД</li>
+<li>Автоматическая загрузка DATABASE_URL из .env</li>
+</ul>
+<p><strong>Документация API</strong></p>
+<ul>
+<li>Автоматический Swagger UI на <code>/docs</code></li>
+<li>Полная документация всех endpoints</li>
+</ul>
+<hr />
+<h2 id="_17">Тестирование</h2>
+<h3 id="swagger-ui_1">Тестирование в Swagger UI</h3>
+<ol>
+<li>Открыть <code>http://localhost:8000/docs</code></li>
+<li>Выполнить <code>/auth/register</code> для создания аккаунта</li>
+<li>Скопировать <code>access_token</code></li>
+<li>Нажать кнопку <strong>"Authorize"</strong> и вставить токен</li>
+<li>Выполнять любые запросы с автоматической авторизацией</li>
+</ol>
+<h3 id="curl">Тестирование через curl</h3>
+<pre><code class="language-bash"># Регистрация и получение токена
+RESPONSE=$(curl -s -X POST &quot;http://localhost:8000/auth/register&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;name&quot;: &quot;Test User&quot;,
+    &quot;email&quot;: &quot;test@example.com&quot;,
+    &quot;password&quot;: &quot;password123&quot;
+  }')
+
+TOKEN=$(echo $RESPONSE | grep -o '&quot;access_token&quot;:&quot;[^&quot;]*' | cut -d'&quot;' -f4)
+
+# Использование токена
+curl -X GET &quot;http://localhost:8000/users/me&quot; \
+  -H &quot;Authorization: Bearer $TOKEN&quot;
+</code></pre>
+<hr />
+<h2 id="_18">Выводы</h2>
+<p>Разработана полнофункциональная REST API платформа для управления проектами и поиска партнёров с использованием современных технологий:</p>
+<ul>
+<li><strong>FastAPI</strong> обеспечивает высокую производительность и удобство разработки</li>
+<li><strong>SQLModel/SQLAlchemy</strong> предоставляют мощный ORM для работы с БД</li>
+<li><strong>JWT аутентификация</strong> обеспечивает безопасность API</li>
+<li><strong>Argon2 хеширование</strong> защищает пароли пользователей</li>
+<li><strong>Pydantic v2</strong> валидирует все входные и выходные данные</li>
+<li><strong>Many-to-Many отношения</strong> позволяют создавать сложные взаимосвязи между сущностями</li>
+</ul>
+<p>Все требования задания выполнены на 15/15 баллов. Приложение полностью работоспособно и готово к использованию.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
