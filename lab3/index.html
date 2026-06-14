@@ -15,8 +15,11 @@
       
       
       
+        
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -24,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -49,7 +52,6 @@
 
     
     
-    
   </head>
   
   
@@ -60,6 +62,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#3" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -194,9 +201,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Главная
+  
+
     
   </span>
+  
   
 
       </a>
@@ -216,9 +228,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Лабораторная 1
+  
+
     
   </span>
+  
   
 
       </a>
@@ -238,9 +255,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Лабораторная 2
+  
+
     
   </span>
+  
   
 
       </a>
@@ -261,18 +283,317 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная 3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
+    
+  
     Лабораторная 3
+  
+
     
   </span>
   
+  
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fastapi-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Упаковка FastAPI приложения в Docker, работа с источниками данных и очереди
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Цель работы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что было сделано
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подзадача 1 — Упаковка в Docker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Подзадача 1 — Упаковка в Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что такое Docker и зачем он нужен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dockerfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подзадача 2 — Вызов парсера из FastAPI (синхронный подход)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Подзадача 2 — Вызов парсера из FastAPI (синхронный подход)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parser_service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сервис парсера (parser_service)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эндпоинт синхронного парсинга в основном API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подзадача 3 — Вызов парсера через очередь (асинхронный подход)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Подзадача 3 — Вызов парсера через очередь (асинхронный подход)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#celery-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что такое Celery и Redis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Конфигурация Celery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taskspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача парсинга (tasks.py)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эндпоинты асинхронного парсинга
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Разница между синхронным и асинхронным подходом
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Разница между синхронным и асинхронным подходом">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-parserparse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Синхронный подход (POST /parser/parse)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-parserparseasync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Асинхронный подход (POST /parser/parse/async)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Когда что использовать
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запуск проекта
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Выводы
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -295,6 +616,271 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fastapi-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Упаковка FastAPI приложения в Docker, работа с источниками данных и очереди
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Цель работы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что было сделано
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подзадача 1 — Упаковка в Docker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Подзадача 1 — Упаковка в Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что такое Docker и зачем он нужен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dockerfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подзадача 2 — Вызов парсера из FastAPI (синхронный подход)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Подзадача 2 — Вызов парсера из FastAPI (синхронный подход)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parser_service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сервис парсера (parser_service)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эндпоинт синхронного парсинга в основном API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подзадача 3 — Вызов парсера через очередь (асинхронный подход)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Подзадача 3 — Вызов парсера через очередь (асинхронный подход)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#celery-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что такое Celery и Redis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Конфигурация Celery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taskspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача парсинга (tasks.py)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эндпоинты асинхронного парсинга
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Разница между синхронным и асинхронным подходом
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Разница между синхронным и асинхронным подходом">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-parserparse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Синхронный подход (POST /parser/parse)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-parserparseasync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Асинхронный подход (POST /parser/parse/async)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Когда что использовать
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запуск проекта
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Выводы
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -304,15 +890,215 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
 
-  <h1>Лабораторная 3</h1>
+<h1 id="3">Лабораторная работа 3</h1>
+<h2 id="fastapi-docker">Упаковка FastAPI приложения в Docker, работа с источниками данных и очереди</h2>
+<h2 id="_1">Цель работы</h2>
+<p>Научиться упаковывать FastAPI приложение в Docker, интегрировать парсер данных с базой данных и вызывать парсер через API синхронно и через очередь задач асинхронно.</p>
+<hr />
+<h2 id="_2">Что было сделано</h2>
+<p>Разработана микросервисная система из 5 контейнеров, объединенных через Docker Compose. За основу взяты FastAPI-приложение из лабораторной работы №1 (модели данных, подключение к PostgreSQL) и парсер цитат с сайта quotes.toscrape.com из лабораторной работы №2.</p>
+<hr />
+<h2 id="1-docker">Подзадача 1 — Упаковка в Docker</h2>
+<h3 id="docker">Что такое Docker и зачем он нужен</h3>
+<p>Docker — платформа для запуска приложений в изолированных контейнерах. Контейнер упаковывает в себя приложение и все его зависимости: интерпретатор Python, библиотеки, переменные окружения. Это решает проблему «у меня работает, а у тебя нет» — контейнер одинаково запускается на любой машине, поддерживающей Docker.</p>
+<h3 id="dockerfile">Dockerfile</h3>
+<p>Для каждого сервиса написан свой <code>Dockerfile</code> — инструкция по сборке образа:</p>
+<pre><code class="language-dockerfile">FROM python:3.11-slim       # базовый образ с Python
+WORKDIR /app                # рабочая директория внутри контейнера
+COPY requirements.txt .     # копируем зависимости отдельно (для кэширования)
+RUN pip install --no-cache-dir -r requirements.txt  # устанавливаем библиотеки
+COPY . .                    # копируем исходный код
+CMD [&quot;uvicorn&quot;, &quot;main:app&quot;, &quot;--host&quot;, &quot;0.0.0.0&quot;, &quot;--port&quot;, &quot;8000&quot;]
+</code></pre>
+<p>Зависимости копируются и устанавливаются отдельно от кода намеренно: Docker кэширует слои образа. Если изменился только код, Docker не будет переустанавливать все библиотеки — возьмет из кэша, что значительно ускоряет пересборку.</p>
+<h3 id="docker-compose">Docker Compose</h3>
+<p>Docker Compose позволяет описать и запустить несколько контейнеров одной командой. В <code>docker-compose.yml</code> описаны 5 сервисов:</p>
+<table>
+<thead>
+<tr>
+<th>Сервис</th>
+<th>Образ / Сборка</th>
+<th>Порт</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>db</code></td>
+<td>postgres:16-alpine</td>
+<td>5432</td>
+<td>База данных PostgreSQL</td>
+</tr>
+<tr>
+<td><code>redis</code></td>
+<td>redis:7-alpine</td>
+<td>6379</td>
+<td>Брокер сообщений для Celery</td>
+</tr>
+<tr>
+<td><code>parser</code></td>
+<td>./parser_service</td>
+<td>8001</td>
+<td>Сервис парсинга HTML</td>
+</tr>
+<tr>
+<td><code>api</code></td>
+<td>./api_service</td>
+<td>8000</td>
+<td>Основное FastAPI приложение</td>
+</tr>
+<tr>
+<td><code>celery_worker</code></td>
+<td>./api_service</td>
+<td>—</td>
+<td>Воркер очереди задач</td>
+</tr>
+</tbody>
+</table>
+<p>Все сервисы находятся в одной Docker-сети и обращаются друг к другу по именам: <code>http://parser:8001</code>, <code>redis://redis:6379</code>, <code>@db:5432</code>.</p>
+<p>Для <code>db</code> и <code>redis</code> настроены <strong>healthcheck</strong> — проверки готовности. Сервис <code>api</code> не стартует раньше, чем база данных и Redis пройдут эти проверки. Это исключает ошибки при старте из-за гонки между сервисами.</p>
+<hr />
+<h2 id="2-fastapi">Подзадача 2 — Вызов парсера из FastAPI (синхронный подход)</h2>
+<h3 id="parser_service">Сервис парсера (<code>parser_service</code>)</h3>
+<p>Парсер из лабораторной работы №2 был обернут в отдельное FastAPI приложение с одним эндпоинтом:</p>
+<pre><code>POST /parse
+Body: {&quot;url&quot;: &quot;https://quotes.toscrape.com/&quot;}
+</code></pre>
+<p>Сервис получает URL, загружает страницу через <code>requests</code>, парсит HTML с помощью <code>BeautifulSoup</code>, извлекает текст цитат, авторов и теги, и возвращает результат в виде JSON.</p>
+<h3 id="api">Эндпоинт синхронного парсинга в основном API</h3>
+<pre><code>POST /parser/parse
+Body: {&quot;url&quot;: &quot;https://quotes.toscrape.com/&quot;}
+</code></pre>
+<h2 id="3_1">Подзадача 3 — Вызов парсера через очередь (асинхронный подход)</h2>
+<h3 id="celery-redis">Что такое Celery и Redis</h3>
+<p><strong>Redis</strong> — хранилище данных в памяти. В данной работе используется как <strong>брокер сообщений</strong>: хранит очередь задач, которые нужно выполнить.</p>
+<p><strong>Celery</strong> — система асинхронной обработки задач. Состоит из двух частей:
+- <strong>Producer</strong> — код в <code>api_service</code>, который кладет задачи в очередь
+- <strong>Worker</strong> — отдельный процесс (<code>celery_worker</code>), который забирает задачи из очереди и выполняет их</p>
+<h3 id="celery">Конфигурация Celery</h3>
+<p>Создан файл <code>celery_app.py</code> с объектом Celery, подключенным к Redis как брокеру и бэкенду результатов:</p>
+<pre><code class="language-python">celery_app = Celery(
+    &quot;lab3&quot;,
+    broker=&quot;redis://redis:6379/0&quot;,   # куда класть задачи
+    backend=&quot;redis://redis:6379/0&quot;,  # куда сохранять результаты
+    include=[&quot;tasks&quot;],               # где искать задачи
+)
+</code></pre>
+<h3 id="taskspy">Задача парсинга (<code>tasks.py</code>)</h3>
+<p>Функция парсинга обернута в Celery-задачу:</p>
+<pre><code class="language-python">@celery_app.task(bind=True, name=&quot;tasks.parse_url&quot;)
+def parse_url_task(self, url: str):
+    # обращается к parser_service
+    # сохраняет результат в БД
+    # при ошибке повторяет до 3 раз с паузой 5 секунд
+</code></pre>
+<h3 id="_3">Эндпоинты асинхронного парсинга</h3>
+<p><strong>Запустить задачу:</strong></p>
+<pre><code>POST /parser/parse/async
+Body: {&quot;url&quot;: &quot;https://quotes.toscrape.com/&quot;}
+</code></pre>
+<p><strong>Проверить статус:</strong></p>
+<pre><code>GET /parser/parse/status/{task_id}
+</code></pre>
+<hr />
+<h2 id="_4">Разница между синхронным и асинхронным подходом</h2>
+<h3 id="post-parserparse">Синхронный подход (<code>POST /parser/parse</code>)</h3>
+<p>Клиент отправляет запрос и блокируется — ждет пока сервер выполнит всю работу целиком.</p>
+<pre><code>Время:  0ms        500ms      1200ms    1500ms
+         |          |           |         |
+Клиент: [запрос]──────────────────────[ответ]
+API:             [ждет парсер][сохр. в БД]
+Парсер:          [загрузка страницы][парсинг]
+</code></pre>
+<p><strong>Плюсы:</strong>
+- Простота — клиент сразу получает результат
+- Не нужны дополнительные запросы для получения данных</p>
+<p><strong>Минусы:</strong>
+- Клиент заблокирован на все время выполнения
+- Если парсинг длится 30 секунд — соединение держится 30 секунд
+- При большой нагрузке быстро кончаются рабочие потоки сервера
+- Если соединение оборвется — результат потеряется</p>
+<h3 id="post-parserparseasync">Асинхронный подход (<code>POST /parser/parse/async</code>)</h3>
+<p>Клиент отправляет запрос, получает <code>task_id</code> немедленно и сам опрашивает статус когда нужно.</p>
+<pre><code>Время:  0ms   50ms         1500ms
+         |     |              |
+Клиент: [запрос][task_id]    [GET /status] → SUCCESS
+API:           [в Redis]
+Worker:              [берет задачу][парсит][сохраняет]
+</code></pre>
+<p><strong>Плюсы:</strong>
+- Клиент не блокируется
+- Сервер может обрабатывать другие запросы пока воркер работает
+- Задачи не теряются при разрыве соединения — они уже в очереди
+- Можно масштабировать: добавить больше воркеров не меняя API
+- Воркер автоматически повторяет задачу при ошибке</p>
+<p><strong>Минусы:</strong>
+- Сложнее в реализации
+- Клиент должен делать дополнительные запросы для получения результата
+- Нужна дополнительная инфраструктура (Redis, Celery)</p>
+<h3 id="_5">Когда что использовать</h3>
+<table>
+<thead>
+<tr>
+<th>Ситуация</th>
+<th>Подход</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Операция занимает &lt; 1-2 секунды</td>
+<td>Синхронный</td>
+</tr>
+<tr>
+<td>Операция долгая (парсинг, генерация, обработка файлов)</td>
+<td>Асинхронный</td>
+</tr>
+<tr>
+<td>Важно сразу вернуть результат пользователю</td>
+<td>Синхронный</td>
+</tr>
+<tr>
+<td>Пользователь может подождать или получить уведомление позже</td>
+<td>Асинхронный</td>
+</tr>
+<tr>
+<td>Нужна надежность (повторные попытки при ошибке)</td>
+<td>Асинхронный</td>
+</tr>
+<tr>
+<td>Высокая нагрузка, много одновременных запросов</td>
+<td>Асинхронный</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_6">Запуск проекта</h2>
+<pre><code class="language-bash"># Собрать и запустить все контейнеры
+docker-compose up --build
 
+# Запустить в фоне
+docker-compose up --build -d
 
+# Остановить
+docker-compose down
+
+# Остановить и удалить данные БД
+docker-compose down -v
+</code></pre>
+<p>После запуска доступны:
+- Основное API и документация: http://localhost:8000/docs
+- Сервис парсера и документация: http://localhost:8001/docs</p>
+<hr />
+<h2 id="_7">Выводы</h2>
+<p>В ходе лабораторной работы была разработана микросервисная система, в которой каждый компонент изолирован в отдельный Docker-контейнер со своими зависимостями. Реализованы оба подхода к вызову парсера: синхронный, при котором клиент ожидает результата напрямую, и асинхронный через очередь Celery и Redis, при котором клиент получает ответ немедленно, а задача выполняется в фоновом процессе.</p>
+<p>Асинхронный подход особенно важен для операций, которые занимают значительное время — таких как парсинг веб-страниц, обработка файлов или вызов внешних API. Он позволяет не блокировать пользователя, масштабировать обработку через добавление воркеров и обеспечивать надежность через механизм повторных попыток.</p>
 
 
 
@@ -361,10 +1147,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
